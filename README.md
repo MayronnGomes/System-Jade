@@ -1,7 +1,7 @@
 # Jade
 <h1>Projeto de Desenvolvimento Web: Jade</h1>
  
-<h2>Status: Done!🙌</h2>
+<h2>Status: Improvements in progress!🙌</h2>
  
 <h3>O que é o Jade?</h3>
 
