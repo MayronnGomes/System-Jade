@@ -22,21 +22,18 @@ Após inserir um nome própio, e-mail, senha e data de nascimento válidos, o us
 
 >Como testar o Jade?🤔
 
-Para utilizar e testar o projeto em sua máquina será necessário o MySQL, NodeJS e o Docker.
+Para utilizar e testar o projeto em sua máquina será necessário o NodeJS e o Docker.
 O Docker irá reproduzir uma imagem do banco de dados, que por sua vez foi feito em MySQL.
 NodeJS será necessário para rodar o servidor local e suas rotas para as requisições.
 
 >Comandos
 
-**É necessário NodeJS instalado no computador**
+**É necessário NodeJS e Docker instalado no computador (Esse tutorial é apenas para o sistema operacional Windows)**
 
-`cd Jade`
+- Primeiro inicialize o docker, para que a sua IDE de desenvolvimento possa reconhecer os contâiners que serão criados ou os já existentes;
+- Após isso dentro do terminal da IDE navegue até a pasta backend atráves do comando "cd _Nome_da_pasta_" ou caso deseje regrassar a pasta anterior "cd ..";
+- Ao chegar na pasta backend inicialize o contâiner docker com o seguinte comando "docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql";
+- Depois faça a criação do banco de dados com o seguinte comando "Get-Content "$(Get-Location)/init.sql" | docker exec -i mysql mysql -uroot -proot";
+- por fim inicialize o NodeJS com o comando "npm start".
 
-`npm install`
-
-`docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql`
-
-`cd backend`
-`Get-Content "$(Get-Location)/init.sql" | docker exec -i mysql mysql -uroot -proot`
-
-`npm start`
+<h2>Agora aproveite o sistema Jade😊</h2>
